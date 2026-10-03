@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: fuel_station_postgres
+    restart: always
+    environment:
+      POSTGRES_DB: ${DB_NAME:-fuel_station_db}
+      POSTGRES_USER: ${DB_USER:-fuel_station}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-fuel_station_secret_pass}
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - "${DB_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/schema:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-fuel_station} -d ${DB_NAME:-fuel_station_db}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    networks:
+      - fuel_station_net
+
+volumes:
+  postgres_data:
+    name: fuel_station_postgres_data
+    driver: local
+
+networks:
+  fuel_station_net:
+    name: fuel_station_network
+    driver: bridge

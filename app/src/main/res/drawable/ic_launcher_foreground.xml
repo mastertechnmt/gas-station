@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Fuel Pump Base / Cabinet -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M34,30 C34,27.8 35.8,26 38,26 L60,26 C62.2,26 64,27.8 64,30 L64,78 C64,80.2 62.2,82 60,82 L38,82 C35.8,82 34,80.2 34,78 Z" />
+    <!-- Pump Base Plinth -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M30,80 L68,80 C69.1,80 70,80.9 70,82 L70,84 C70,85.1 69.1,86 68,86 L30,86 C28.9,86 28,85.1 28,84 L28,82 C28,80.9 28.9,80 30,80 Z" />
+    <!-- Display Screen -->
+    <path
+        android:fillColor="#065F46"
+        android:pathData="M40,34 L58,34 C59.1,34 60,34.9 60,36 L60,46 C60,47.1 59.1,48 58,48 L40,48 C38.9,48 38,47.1 38,46 L38,36 C38,34.9 38.9,34 40,34 Z" />
+    <!-- Fuel Indicator Dial / Icon -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M49,38 C47.3,38 46,39.3 46,41 C46,42.7 47.3,44 49,44 C50.7,44 52,42.7 52,41 C52,39.3 50.7,38 49,38 Z" />
+    <!-- Fuel Hose -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:pathData="M64,48 C72,48 76,54 76,64 L76,70 C76,73.3 73.3,76 70,76 L64,76" />
+    <!-- Fuel Nozzle -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M74,44 L78,44 C79.1,44 80,44.9 80,46 L80,56 L76,56 L74,52 Z" />
+    <!-- Drop of fuel -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M49,56 C47,59 45,62 45,65 C45,67.2 46.8,69 49,69 C51.2,69 53,67.2 53,65 C53,62 51,59 49,56 Z" />
+</vector>
